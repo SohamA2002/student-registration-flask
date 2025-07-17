@@ -2,23 +2,24 @@ pipeline {
     agent any
 
     environment {
+        APP_NAME = 'student-registration-flask'
         VENV_DIR = 'venv'
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/SohamA2002/student-registration-flask.git'
+                git branch: 'main', url: 'https://github.com/SohamA2002/student-registration-flask.git'
             }
         }
 
         stage('Set Up Python Environment') {
             steps {
                 sh '''
-                python3 -m venv $VENV_DIR
-                source $VENV_DIR/bin/activate
-                pip install --upgrade pip
-                pip install -r requirements.txt
+                    python3 -m venv $VENV_DIR
+                    source $VENV_DIR/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
                 '''
             }
         }
@@ -26,8 +27,9 @@ pipeline {
         stage('Run Flask App') {
             steps {
                 sh '''
-                source $VENV_DIR/bin/activate
-                nohup python3 app.py > app.log 2>&1 &
+                    source $VENV_DIR/bin/activate
+                    python3 app.py &
+                    sleep 5  # Give server time to start
                 '''
             }
         }
@@ -35,7 +37,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ Deployment succeeded!'
+            echo '✅ Deployment successful!'
         }
         failure {
             echo '❌ Deployment failed.'
