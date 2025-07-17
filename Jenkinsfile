@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv $VENV_DIR
-                    source $VENV_DIR/bin/activate
+                    . $VENV_DIR/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
@@ -27,9 +27,9 @@ pipeline {
         stage('Run Flask App') {
             steps {
                 sh '''
-                    source $VENV_DIR/bin/activate
+                    . $VENV_DIR/bin/activate
                     python3 app.py &
-                    sleep 5  # Give server time to start
+                    sleep 5
                 '''
             }
         }
