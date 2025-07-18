@@ -126,6 +126,7 @@ app.run(host='0.0.0.0', port=5000, debug=True)
 # 🔹 Step 3: Jenkins Installation 
 
 - Create Jenkinsfile (in root of repo)
+```
   - student-registration-flask/
     ├── app.py
     ├── config.py        
@@ -133,6 +134,7 @@ app.run(host='0.0.0.0', port=5000, debug=True)
     ├── templates/
     │   └── register.html
     └── Jenkinsfile ✅ CI/CD pipeline
+```
   ✅ Replace the GitHub URL with your actual repo URL.
 
 - Install Jenkins on EC2
