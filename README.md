@@ -138,7 +138,7 @@ app.run(host='0.0.0.0', port=5000, debug=True)
   ✅ Replace the GitHub URL with your actual repo URL.
 
 - Install Jenkins on EC2
-  ```bash
+```bash
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt update -y
