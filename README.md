@@ -188,7 +188,7 @@ http://<your-ec2-ip>:5000
 
 ---
 
-# 🙋‍♀📬 Author
+# 📬 Author
 
 **Soham Arekar**  
 📧 sohamarekar2002@gmail.com
