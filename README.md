@@ -54,6 +54,5 @@ This project demonstrates:
 | **Networking**      | `AWS VPC`, `Security Groups` | Isolated network environment and traffic control |
 | **Dependency Mgmt** | `pip`, `requirements.txt`    | Python package installation                      |
 | **Virtual Env**     | `venv`                       | Isolate Python environment for app               |
-| **Optional**        | `CloudWatch`, `IAM`          | Logging and permission control (optional)        |
 
 ---
