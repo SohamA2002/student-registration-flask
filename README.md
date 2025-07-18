@@ -40,3 +40,20 @@ This project demonstrates:
         |     (Also on EC2 or local) |
         +----------------------------+
 ---
+
+# ⚙️ Technologies Used
+
+| Category            | Technology                   | Purpose                                          |
+| ------------------- | ---------------------------- | ------------------------------------------------ |
+| **Frontend**        | `HTML`, `CSS`                | UI for student registration form                 |
+| **Backend**         | `Python`, `Flask`            | Web framework and app logic                      |
+| **Database**        | `MySQL (Amazon RDS)`         | Persistent storage for student records           |
+| **Version Control** | `Git`, `GitHub`              | Source code management                           |
+| **CI/CD**           | `Jenkins`, `Jenkinsfile`     | Continuous Integration and Deployment            |
+| **Hosting**         | `AWS EC2`                    | Virtual server to run the Flask app              |
+| **Networking**      | `AWS VPC`, `Security Groups` | Isolated network environment and traffic control |
+| **Dependency Mgmt** | `pip`, `requirements.txt`    | Python package installation                      |
+| **Virtual Env**     | `venv`                       | Isolate Python environment for app               |
+| **Optional**        | `CloudWatch`, `IAM`          | Logging and permission control (optional)        |
+
+---
